@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+          <hibernate-mapping>  
+          <class name="com.psl.bean.User" table="User">  
+          <id name="username">  
+          <column name="username"></column>
+          </id>  
+          <property name="password"></property>  
+          <property name="firstName"></property>  
+          <property name="lastName"></property>  
+          <property name="homeAddress"></property>
+          <property name="officeAddress"></property>
+          <property name="profilePicture"></property>  
+		  <property name="email"></property>
+		  <property name="mobileNo"></property>  
+         
+          </class>  
+          
+          <class name="com.psl.bean.Expense" table="Expense">  
+          <id name="expenseId">
+          <generator class="increment"></generator>  
+          </id>  
+          <property name="username"></property>  
+          <property name="expenseAmount"></property>  
+          <property name="expenseType"></property>  
+          <property name="expenseDescription"></property>
+          <property name="expenseDate"></property>
+          
+          </class> 
+          
+          <class name="com.psl.bean.Event" table="Event">  
+          <id name="eventId">
+          <generator class="increment"></generator>  
+          </id>  
+          <property name="username"></property>  
+          <property name="eventType"></property>  
+          <property name="eventDescription"></property>
+          <property name="postDate"></property> 
+          <property name="eventStatus"></property>
+          <property name="eventPriority"></property>
+          
+          </class> 
+            
+            
+            
+            
+          </hibernate-mapping>  
